@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="grid min-h-screen grid-rows-[auto,1fr,auto] px-4 container m-auto">
+        <header className='leading-[60px] font-bold'>Kin + StudyCases</header>
+        <main className='py-12'>{children}</main>
+        <footer className="text-center leading-[60px] opacity-80 ">Con amor</footer>
+      </body>
     </html>
   )
 }
