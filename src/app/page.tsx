@@ -12,7 +12,7 @@ export default async function Home() {
       {caseStudies.map((caseStudies) => (
         <Link key={caseStudies.id} href={`/${caseStudies.id}`}>
         <hgroup className=" grid gap-2">
-          <img src={caseStudies.hero_image} alt={caseStudies.title} className="w-full object-cover" height={256} />
+          <img src={caseStudies.hero_image} alt={caseStudies.title} className="w-full object-cover h-[256px]" height={256} />
           <div>
             <h2 className="text-xl font-bold">{caseStudies.title}</h2>
             <p className="opacity-80">{caseStudies.teaser}</p>
