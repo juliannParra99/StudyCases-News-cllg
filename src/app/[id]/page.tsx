@@ -1,5 +1,6 @@
 import api from "@/api";
 import Link from "next/link";
+import { notFound } from "next/navigation"
 
 export default async function IdPage({
   params: { id },
@@ -7,6 +8,7 @@ export default async function IdPage({
   params: { id: string };
 }) {
   const caseStudy = await api.caseStudy.fetch(Number(id));
+ 
   return (
     <article className="grid gap-8">
       <Link href="/" className="opacity-80">
