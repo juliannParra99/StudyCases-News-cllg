@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Foteer from '../components/footer/Footer'
+import  Navbar from '../components/navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="grid min-h-screen grid-rows-[auto,1fr,auto] px-4 container m-auto">
-        <header className='leading-[60px] font-bold'>StudyCases News</header>
-        <main className='py-12'>{children}</main>
-        <footer className="text-center leading-[60px] opacity-80 "> All rigths reserved.</footer>
+      <body className="flex min-h-screen flex-col bg-[#121212]">
+        <Navbar />
+
+        {/* <header className='leading-[60px] font-bold'>StudyCases News</header> */}
+        <main className='grid min-h-screen grid-rows-[auto,1fr,auto] px-4 container m-auto py-24'>{children}</main>
+        <Foteer/>
       </body>
     </html>
   )
